@@ -14,3 +14,11 @@ ng serve -o
 <br/>
 Then Your project will run on </br>
 http://localhost:4200/
+
+<br/>
+#For the Backend Code 
+<h3> Run npm backend.js</h3>
+<p>
+  then the code will run at http://localhost:8080/node
+  </p>
+  
