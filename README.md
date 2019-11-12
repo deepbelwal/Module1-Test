@@ -11,3 +11,6 @@ Run npm install </br>
 so as to install all the dependencies</br>
 Run the Angular Project</br>
 ng serve -o 
+<br/>
+Then Your project will run on </br>
+http://localhost:4200/
