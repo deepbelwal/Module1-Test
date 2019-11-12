@@ -1,0 +1,30 @@
+<div>
+    <button (click)='displayData()' >Click Me</button>
+</div>
+<div *ngIf="clicked">
+  <table>
+    <tr>
+        <th>ID</th>
+        <th>GrapghQLID</th>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>TITLE</th>
+        <th>COMPLETED</th>
+    </tr>
+
+    <tr *ngFor='let user of allData | paginate: { itemsPerPage: 5, currentPage:p }'>
+      <td>{{user.id}}</td>
+      <td>{{user.graphqlid}}</td>
+      <td >{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td (click)="giveId(user)">{{user.title}}</td>
+      <td>{{user.completed}}</td>
+    </tr>
+  </table>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+<div *ngIf="nameClicked">
+    {{userTitle}}
+    <br/>
+    {{userCompleted}}
+  </div>
